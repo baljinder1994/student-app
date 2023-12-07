@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <h1>Student List App</h1>
+        <div class="nav-links">
+            <a target="_blank" href="#" class="nav-link">Source Code</a>
+            <a target="_blank" href="#" class="nav-link">Idea Credits</a>
+        </div>
+    </header>
+
+    <div class="container" onsubmit='event.preventDefault(); return addBook()'>
+        
+        <div class="alert" id="alert">
+            <p id="alert-message"></p>
+        </div>
+
+        <form class="add-book-form">
+            <div class="form-group">
+                <label for="title">Enter Student Name</label>
+                <input required type="text" name="book_title" id="bookTitle" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="title">Enter Student Roll. No</label>
+                <input required type="text" name="bookAuthor" id="bookAuthor" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="title">Enter Student Class</label>
+                <input required type="text" name="bookISBN" id="bookISBN" class="form-input">
+            </div>
+            <div class="form-group">
+                <button class="btn" type="submit" >Add Student</button>
+            </div>
+        </form>
+
+
+        <div class="book-list">
+             <table>
+                 <thead>
+                   <tr>
+                     <th>Student Name</th>
+                     <th>Student Roll No</th>
+                     <th>Student Class</th>
+                     <th>Actions</th>
+                   </tr>
+                 </thead>
+                 <tbody id="book-list">
+                  
+                 </tbody>
+               </table>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
